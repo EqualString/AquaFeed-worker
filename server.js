@@ -172,6 +172,14 @@ il.onError(function(error){
     console.log(error); //Primanje grešaka
 });
 
-
+/*client = mqtt.connect('mqtt://test.mosquitto.org');  //Free Broker
+		client.subscribe('aquafeed-arduino-'+socket.request.session.userID); //(subscribe soba)
+		console.log(socket.request.session.userID);
+		client.on('message', function (topic, message) {
+			var por = message.toString();
+			if(por == 'feed'){
+				socket.emit('gotFeedmsg');
+			}
+		});*/
 
 
