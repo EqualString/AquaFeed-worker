@@ -13,7 +13,7 @@ var server = app.listen(server_port, function () {
 	var port = server.address().port;
 	console.log('app @ :http://localhost:'+server_port+'/');
 	console.log('->');
-	http_request.post("http://localhost:8080/api/worker", {form: {key: 'aquafeed-arduino-1'}, headers: headers});
+	http_request.post("http://localhost:8080/api/worker", {form: {key: '1'}, headers: headers});
 });
 
 app.get('/', function(req, res){
