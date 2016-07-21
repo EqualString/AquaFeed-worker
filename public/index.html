@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>AquaFeed | Worker Status</title>
+		<meta name="author" content="Alen Egredžija">
+		<link rel="shortcut icon" href="img/favicon.png">
+		<meta name="viewport" content="width=device-width">
+		<!-- Google Font -->
+		<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="css/bootstrap.css" type="text/css"> 
+		<!-- Style CSS -->
+		<link rel="stylesheet" href="css/style.css" type="text/css"> 
+	</head>
+<body>	
+	<div class="container">
+		<h1>Current System Status</h1>
+		<div class="row center-align">
+			<div class="col-md-4">
+				<p>Os Platform: <%= Platform %></p>
+			</div>	
+			<div class="col-md-4">
+				<p>Os Cores: <%= Cpus %></p>
+			</div>
+			<div class="col-md-4">
+				<p>User IP: <%= userIP %></p>
+			</div>		
+		</div>
+		<div class="row center-align">
+			<div class="col-md-6 gauges">
+				<div id="g1" class="gauge"></div>
+			</div>	
+			<div class="col-md-6 gauges">
+				<div id="g2" class="gauge"></div>
+			</div>	
+		</div>
+	</div>
+</body>
+<script src="js/socket.io.js"></script>
+<script src="js/raphael-2.1.4.min.js"></script>
+<script src="js/justgage.js"></script>
+<script src="js/main.js"></script>
+</html>
